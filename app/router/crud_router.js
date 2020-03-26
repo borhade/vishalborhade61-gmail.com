@@ -12,10 +12,11 @@ connection.connect();
 router.get('/',function(req,res){
   connection.query('SELECT * FROM worker',function(err,rows,fields){
      if (err) throw err
-      res.json(rows);
+    res.render('index',{
+          pagetitle:'User List',
+          worker_data:rows
+     });
   });
-    // res.render('index',{
-    //     pagetitle:'User List'
-    // });
+connection.end();
 });
 module.exports= router;
