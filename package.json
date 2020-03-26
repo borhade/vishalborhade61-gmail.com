@@ -4,7 +4,7 @@
   "description": "crud operation in nodejs",
   "main": "app/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon -e ejs,js,css app/app.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/borhade/vishalborhade61-gmail.com#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "reload": "^3.0.4"
   }
 }
