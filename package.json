@@ -1,0 +1,22 @@
+{
+  "name": "vishalborhade61-gmail.com",
+  "version": "1.0.0",
+  "description": "crud operation in nodejs",
+  "main": "app/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/borhade/vishalborhade61-gmail.com.git"
+  },
+  "author": "vihsal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/borhade/vishalborhade61-gmail.com/issues"
+  },
+  "homepage": "https://github.com/borhade/vishalborhade61-gmail.com#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
