@@ -52,8 +52,19 @@ router.get('/edit_record/:id',function(req,res){
               pagetitle:'User Edit Form',
               edit_data:rows
         });
-
     });
 });
+
+// Update Record
+router.put('/update_record/:id',function(req,res){
+  var update_id = req.params.id;
+  var update_query =`update worker SET FIRST_NAME='`+req.body.first_name+`',LAST_NAME='`+req.body.last_name+`',SALARY=`+req.body.salary+` WHERE WORKER_ID=${update_id}`;
+  console.log(update_query);
+  dbconnection.query(update_query,function(err,result){
+      if(err) throw err;
+  });
+
+})
+
 
 module.exports= router;
