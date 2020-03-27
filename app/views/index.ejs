@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title><%=sitetitle%></title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-</head>
-<body>
+<%- include ('template/header') %>
 <div class="container">
   <h2><%=pagetitle%></h2>
     <a href="add_record_form" class="btn btn-primary">Add Record</a>
@@ -24,7 +16,7 @@
       <tr>
         <td><%= item.WORKER_ID %></td>
         <td><%= item.SALARY %></td>
-        <td><%= item.DEPARTMENT%></td>
+        <td><%= item.DEPARTMENT %></td>
         <!-- <td<%= item.JOINING_DATE %></td> -->
         <td><a href="edit_record/<%=item.WORKER_ID%>" class="btn btn-primary">Edit</a>|
         <button type="button" class="btn btn-danger delete_record" data-id="<%= item.WORKER_ID %>">Delete</button></td>
@@ -33,9 +25,4 @@
     </tbody>
   </table>
 </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="/custom.js"></script>
-  <script src="/reload/reload.js"></script>
-</body>
-</html>
+<%- include ('template/footer') %>
