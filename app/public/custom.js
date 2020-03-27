@@ -7,9 +7,7 @@ $('#add_user_record').submit(function(e){
    }).done(function(res){
       console.log(res);
    });
-
 });
-
 
 
 $(document).on('click','.delete_record',function(){
@@ -21,3 +19,17 @@ $(document).on('click','.delete_record',function(){
        console.log(res);
   });
 });
+
+$('#update_user_record').submit(function(e){
+  e.preventDefault();
+  var record_update_id = $('#edit_id').val();
+  $.ajax({
+    url:'http://localhost:3000/crud/update_record/'+record_update_id,
+    type:'PUT',
+    data:$(this).serialize()
+  }).done(function(res){
+      console.log(res);
+  });
+
+
+})
